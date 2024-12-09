@@ -1,1 +1,4 @@
 *.json
+*.idx
+*.bin
+*.txt

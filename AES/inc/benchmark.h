@@ -50,10 +50,10 @@
      * @param[in] FUNCTION		- the function executed.
      */
 #define BPS_BENCH_ITEM(_FUNCTION, _ROUNDS)                  \
-    retrys = _ROUNDS;                                  \
+    retrys = _ROUNDS;                                       \
     _FUNCTION;                                              \
     time_bench_before();                                    \
-    for (int _r = 0; _r < retrys; _r++) { _FUNCTION; } \
+    for (int _r = 0; _r < retrys; _r++) { _FUNCTION; }          \
     time_bench_after(time_t, _b);
 
 
