@@ -1,4 +1,6 @@
 *.json
 *.idx
 *.bin
-*.txt
+.vs
+build/
+*.user

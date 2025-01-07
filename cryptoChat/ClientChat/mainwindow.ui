@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>834</width>
+    <height>734</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QHBoxLayout" name="qh_tip">
+      <item>
+       <widget class="QLabel" name="tip_label">
+        <property name="text">
+         <string>系统提示信息</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="tip_edit"/>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTextEdit" name="recieve_edit"/>
+    </item>
+    <item row="2" column="0">
+     <layout class="QGridLayout" name="client_qg">
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="cancel_pb">
+          <property name="text">
+           <string>取消</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="send_pb">
+          <property name="text">
+           <string>发送</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QPushButton" name="disconnect_pb">
+          <property name="text">
+           <string>断开</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="connect_pb">
+          <property name="text">
+           <string>连接</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <widget class="QTextEdit" name="send_edit"/>
+      </item>
+      <item row="0" column="1">
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="username_edit">
+          <property name="text">
+           <string>asdas</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="host_label">
+          <property name="text">
+           <string>主机地址</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="username_label">
+          <property name="text">
+           <string>用户名</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="host_edit">
+          <property name="text">
+           <string>127.0.0.1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="port_label">
+          <property name="text">
+           <string>端口号</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="port_edit">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>834</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
