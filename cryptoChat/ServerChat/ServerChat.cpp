@@ -25,8 +25,8 @@ void server_epoll() {
 
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
-    inet_pton(AF_INET, "10.201.64.246", &serv_addr.sin_addr);
-    serv_addr.sin_port = htons(20965);
+    serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    serv_addr.sin_port = htons(8080);
 
     char ip_str[INET_ADDRSTRLEN];
     inet_ntop(AF_INET, &(serv_addr.sin_addr), ip_str, INET_ADDRSTRLEN);
