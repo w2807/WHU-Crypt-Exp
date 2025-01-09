@@ -3,16 +3,14 @@
 
 #include <QMainWindow>
 #include <QTcpSocket>
-#include <QLabel>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QMessageBox>
 #include <QDateTime>
-
+#include <sstream>
+#include "Crypto.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui {
-class MainWindow;
+namespace Ui
+{
+    class MainWindow;
 }
 QT_END_NAMESPACE
 
@@ -26,13 +24,19 @@ public:
 
 private slots:
     void ConnectToServer();
-	void DisconnectFromServer();
-	void SendMessageToServer();
-	void ReceiveMessageFromServer();
+    void DisconnectFromServer();
+    void SendMessageToServer();
+    void ReceiveMessageFromServer();
+    void handleKeyExchange(const std::string &data);
 
 private:
     Ui::MainWindow *ui;
-	QTcpSocket* clnt_sock;
-	QString username;
+    QTcpSocket *clnt_sock;
+    CryptoManager *crypto;
+    SHA256 *sha256;
+    mpz_class sessionKey;
+    QString username;
+    std::vector<uint8_t> aesKey;
 };
+
 #endif // MAINWINDOW_H
