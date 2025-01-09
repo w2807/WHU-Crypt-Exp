@@ -75,7 +75,7 @@ void MainWindow::ReceiveMessageFromServer() {
         int end = msg.indexOf(']');
         if (end > 0) {
             QString timestamp = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
-            QString msg_head = msg.mid(0, end + 1) + " " + timestamp + "\n";
+            QString msg_head = msg.mid(0, end + 1) + " " + timestamp;
             QString msg_content = msg.mid(end + 1, -1);
 
             if (msg.mid(0, end) == username) {
@@ -84,7 +84,8 @@ void MainWindow::ReceiveMessageFromServer() {
                 msg_head = QString("<b><span style='color:lightblue;'>%1</span></b>").arg(msg_head);
             }
 
-            ui->recieve_edit->append(msg_head + msg_content);
+            ui->recieve_edit->append(msg_head);
+            ui->recieve_edit->append(msg_content);
         }
     }
 }
